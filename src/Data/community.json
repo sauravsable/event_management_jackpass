@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Indiranagar Run Club",
+      "location": "New York, NY",
+      "description": "A community focused on environmental sustainability."
+    },
+    {
+      "id": 2,
+      "name": "Community 2",
+      "location": "San Francisco, CA",
+      "description": "A tech-savvy community that brings innovation to the forefront."
+    },
+    {
+      "id": 3,
+      "name": "Community 3",
+      "location": "Los Angeles, CA",
+      "description": "A vibrant community centered around arts and culture."
+    },
+    {
+      "id": 4,
+      "name": "Community 4",
+      "location": "Chicago, IL",
+      "description": "A sports-oriented community with a passion for teamwork."
+    },
+    {
+      "id": 5,
+      "name": "Community 5",
+      "location": "Austin, TX",
+      "description": "A community focused on entrepreneurship and startups."
+    },
+    {
+      "id": 6,
+      "name": "Community 6",
+      "location": "Seattle, WA",
+      "description": "A community dedicated to technology and coding."
+    },
+    {
+      "id": 7,
+      "name": "Community 7",
+      "location": "Miami, FL",
+      "description": "A creative community centered around design and innovation."
+    }
+  ]
+  
