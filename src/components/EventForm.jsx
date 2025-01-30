@@ -149,9 +149,17 @@ const EventForm = () => {
         </div>
 
         <div className="space-y-2 lg:p-0 px-4 pb-2 pt-0 bg-white">
-          <button type="submit" className="block w-full bg-blue-600 text-white rounded-full py-3 shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">
-            Create Event
-          </button>
+        <button type="submit"
+          disabled={!(formData.community && formData.title && formData.startDate && formData.endDate && formData.location && formData.description)}
+          className={`block w-full rounded-full py-3 shadow-md focus:ring-2 focus:ring-blue-500 
+          ${formData.community && formData.title && formData.startDate && formData.endDate && formData.location && formData.description
+          ? "bg-blue-600 text-white hover:bg-blue-700" 
+          : "bg-blue-400 text-white cursor-not-allowed"}
+        `}
+        >
+        Create Event
+        </button>
+
         </div>
       </div>
     </form>
