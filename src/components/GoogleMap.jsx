@@ -1,6 +1,7 @@
-import React from "react";
+// GoogleMap component which is simply a javascript function
 
 const GoogleMap = ({ location }) => {
+  // Dynamic URL of the google map iframe
   const googleMapsEmbedURL = location
     ? `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`
     : null;
@@ -8,6 +9,7 @@ const GoogleMap = ({ location }) => {
   return (
     <div>
       {googleMapsEmbedURL && (
+        // Google Map Iframe provided by Google
         <iframe
           width="100%"
           height="160"
