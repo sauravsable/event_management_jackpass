@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Event Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React-based Event Management App that allows users to create, view, and manage events. The application supports media uploads (images or videos), Google Maps integration, and dynamic community-based event categorization.
 
-## Available Scripts
+*Features
 
-In the project directory, you can run:
+1.Event Creation: a. Users can create new events by providing event title, description, start and end dates, location, and selecting a community. b. Users can upload media (images or videos) to be associated with the event.
 
-### `npm start`
+2. Event List: A dynamic list of all events is displayed. Each event is shown in a card that contains essential information such as title, community, date, and location.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Google Maps Integration: A Google Map is embedded dynamically based on the event location entered by the user, providing a visual reference for event locations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Responsive Design: The app is fully responsive, adapting to different screen sizes to ensure a smooth user experience on both desktop and mobile devices.
 
-### `npm test`
+*Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. React: A JavaScript library for building user interfaces. It allows us to create reusable UI components and manage the application state effectively.
 
-### `npm run build`
+2. React Hooks (useState, useEffect): These hooks are used for managing the state and side effects in functional components. useState manages the event data, while useEffect is used for fetching and setting the       events from localStorage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. React-Helmet: A library for managing changes to the document head. It is used here to dynamically set the page title to reflect the current page and content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Tailwind CSS: A utility-first CSS framework used for styling the app. It makes it easy to build modern, responsive, and flexible layouts without writing custom CSS.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Google Maps API (via iframe): Embeds a dynamic Google Map based on the event’s location by generating the map's URL dynamically.
 
-### `npm run eject`
+6. LocalStorage: Stores event data locally in the browser so that it persists between sessions, even if the page is reloaded or the app is closed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*Component Overview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. EventForm: This component allows users to create new events. It handles user input for event details, such as title, start and end dates, location, and description. The component also allows users to upload 
+    images or videos associated with the event.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. EventCard: Displays a card for each event, showing the event's title, community, start date, location, and media (image or video). The event's media is rendered conditionally based on the file type (image/video).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. EventList: Displays a grid of all events stored in localStorage. Each event is passed to the EventCard component for rendering.
 
-## Learn More
+4. GoogleMap: This component renders a Google Map iframe based on the event’s location. The map is embedded dynamically using the Google Maps URL.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. ShowEvents: The main page that lists all events. It also includes a tab navigation feature to toggle between viewing events and communities. The event data is loaded from localStorage and passed down to the EventList component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Challenges Faced
 
-### Code Splitting
+1. Aspect Ratio Issue with Video: One of the challenges was adjusting the aspect ratio of the video correctly. Initially, only the first frame of the video was being adjusted, and not the entire playback. After       some investigation, I had to ensure the video player’s dimensions were properly handled to maintain the desired aspect ratio throughout the entire video playback.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Dynamic Google Map Embedding: Another challenge was dynamically embedding a Google Map iframe based on the location entered by the user. The URL for the map iframe needed to be updated each time a user             selected or typed a new location. This was resolved by using React state and dynamically updating the iframe's src attribute.
 
-### Analyzing the Bundle Size
+3. Managing Event Data in LocalStorage:Ensuring that event data was correctly saved and retrieved from localStorage was tricky. I needed to account for cases where the data might be missing or malformed, as well      as handle updates to the event list. I also made sure that the data persisted between sessions without any loss.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Conditional Rendering of Events and Communities: The feature to toggle between displaying events and communities required careful handling of tab-based navigation. I used the tabIndex state to conditionally       render the event list and placeholder content for communities.
 
-### Making a Progressive Web App
+* Setup & Installation
+To get started with the project, follow the steps below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. git clone https://github.com/sauravsable/event_management_jackpass.git
+2. cd event-management-app
+3. Install Dependencies:
+4. npm install
+5. Start the Development Server:
+6. npm start
+This will start the development server, and you can view the app in your browser at http://localhost:3000.
