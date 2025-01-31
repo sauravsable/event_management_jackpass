@@ -5,6 +5,7 @@ A simple React-based Event Management App that allows users to create, view, and
 *Features
 
 1.Event Creation:
+  
   a. Users can create new events by providing event title, description, start and end dates, location, and selecting a community.
   b. Users can upload media (images or videos) to be associated with the event.
 
@@ -53,8 +54,6 @@ A simple React-based Event Management App that allows users to create, view, and
 
 * Setup & Installation
 To get started with the project, follow the steps below:
-
-* Clone the Repository:
 
 1. git clone https://github.com/sauravsable/event_management_jackpass.git
 2. cd event-management-app
