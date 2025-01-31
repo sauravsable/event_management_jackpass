@@ -4,10 +4,7 @@ A simple React-based Event Management App that allows users to create, view, and
 
 *Features
 
-1.Event Creation:
-  
-  a. Users can create new events by providing event title, description, start and end dates, location, and selecting a community.
-  b. Users can upload media (images or videos) to be associated with the event.
+1.Event Creation: a. Users can create new events by providing event title, description, start and end dates, location, and selecting a community. b. Users can upload media (images or videos) to be associated with the event.
 
 2. Event List: A dynamic list of all events is displayed. Each event is shown in a card that contains essential information such as title, community, date, and location.
 
