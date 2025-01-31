@@ -56,7 +56,7 @@ To get started with the project, follow the steps below:
 
 * Clone the Repository:
 
-1. git clone https://github.com/yourusername/event-management-app.git
+1. git clone https://github.com/sauravsable/event_management_jackpass.git
 2. cd event-management-app
 3. Install Dependencies:
 4. npm install
